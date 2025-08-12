@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keane Cregencia - Portfolio</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Added external CSS file reference -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <!-- Updated Branding with KNC | Computer Engineer -->
+        <a class="navbar-brand-container" href="#home">
+            <span class="logo-text">KNC</span>
+            <span class="logo-divider">|</span>
+            <span class="logo-subtext">Computer Engineer</span>
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#expertise">Expertise</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#education">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <a href="#about" class="hero-btn">Discover My Journey</a>
+        </div>
+        <div class="manila-clock">
+            <div class="clock-container">
+                <div class="time-display" id="manilaTime"></div>
+                <div class="date-display" id="manilaDate"></div>
+                <div class="timezone-label">Manila, Philippines</div>
+            </div>
+        </div>
+    </section>
+
+            <!-- Social Media Icons -->
+        <div class="social-icons-container">
+            <a href="https://www.facebook.com/keane.cregencia" target="_blank" class="social-icon" data-tooltip="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/kiyancrg/" target="_blank" class="social-icon" data-tooltip="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://github.com/kcregenciaa/cregencia-ncp3106" target="_blank" class="social-icon" data-tooltip="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:YOUR_EMAIL" class="social-icon" data-tooltip="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+
+<!-- About Section -->
+<section id="about" class="section about">
+    <div class="container">
+        <div class="section-title">
+            <h2>About Me</h2>
+        </div>
+        <div class="row align-items-center">
+            <!-- Text Content -->
+            <div class="col-lg-6 animate-on-scroll">
+                <div class="position-relative">
+                    <div class="about-content">
+                        <h3 class="mb-4">Hello! I'm Keane Cregencia</h3>
+                        
+                        <!-- Animated Rotating Text -->
+                        <h3 class="animated-text">
+                            <span id="typing-text"></span>
+                        </h3>
+                        <p class="mb-4">
+                            As a web developer, I specialize in creating responsive, user-friendly, and visually engaging websites that deliver exceptional user experiences. I am dedicated to mastering modern web technologies and best practices, ensuring each project is optimized for performance, accessibility, and scalability.
+                        </p>
+                        <div class="row">
+                            <div class="col-6">
+                                <strong>Age:</strong> 19<br>
+                                <strong>Location:</strong> Philippines
+                            </div>
+                            <div class="col-6">
+                                <strong>Email:</strong> cregencia.keanenedd@ue.edu.ph<br>
+                                <strong>Phone:</strong> +63 9070950988
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Image with Spotify Effect -->
+            <div class="col-lg-6 animate-on-scroll text-center">
+                <div class="spotify-img-wrapper">
+                    <img src="/images/prof.png" 
+                         alt="Keane Cregencia" 
+                         class="img-fluid about-img shadow-lg">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Expertise Section -->
+<section id="expertise" class="section">
+    <div class="container">
+        <div class="section-title">
+            <h2>My Expertise</h2>
+        </div>
+        <div class="row g-4">
+            <!-- Software & Mobile Development -->
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <div class="card skill-card">
+                    <div class="skill-icon">
+                        <div class="icon-grid">
+                            <div class="icon-item" data-name="Python">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <div class="icon-item" data-name="MySQL">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="icon-item" data-name="Kotlin">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="icon-item" data-name="Java">
+                                <i class="fab fa-java"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Software & Mobile Development</h4>
+                    <p>Building robust applications and mobile solutions with Python, Java, Kotlin, and efficient database systems.</p>
+                </div>
+            </div>
+            
+            <!-- Web Development -->
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <div class="card skill-card">
+                    <div class="skill-icon">
+                        <div class="icon-grid">
+                            <div class="icon-item" data-name="HTML">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <div class="icon-item" data-name="CSS">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <div class="icon-item" data-name="JavaScript">
+                                <i class="fab fa-js-square"></i>
+                            </div>
+                            <div class="icon-item" data-name="Bootstrap">
+                                <i class="fab fa-bootstrap"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Web Development</h4>
+                    <p>Creating responsive, modern websites with HTML5, CSS3, JavaScript, and popular frameworks.</p>
+                </div>
+            </div>
+            
+            <!-- AI Tools -->
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <div class="card skill-card">
+                    <div class="skill-icon">
+                        <div class="icon-grid">
+                            <div class="icon-item" data-name="ChatGPT">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="icon-item" data-name="Blackbox">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="icon-item" data-name="v0">
+                                <i class="fas fa-magic"></i>
+                            </div>
+                            <div class="icon-item" data-name="Copilot">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <h4>AI Tools</h4>
+                    <p>Leveraging cutting-edge AI tools like ChatGPT, Copilot, and v0 to enhance development workflows.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .skill-card {
+        height: 100%;
+        border: none;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        padding: 30px 25px;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        text-align: center;
+    }
+    
+    .skill-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    }
+    
+    .icon-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin: 10px 0 25px;
+    }
+    
+    .icon-item {
+        position: relative;
+        font-size: 3.5rem; /* 56px - 3.5x larger than paragraph */
+        color: var(--primary-color);
+        transition: all 0.3s ease;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .icon-item:hover {
+        transform: scale(1.15);
+        color: var(--primary-dark);
+    }
+    
+    .icon-item::after {
+        content: attr(data-name);
+        position: absolute;
+        bottom: -28px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--primary-color);
+        color: white;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        opacity: 0;
+        transition: all 0.3s ease;
+        font-weight: 500;
+        white-space: nowrap;
+    }
+    
+    .icon-item:hover::after {
+        opacity: 1;
+        bottom: -22px;
+    }
+    
+    .skill-card h4 {
+        margin: 5px 0;
+        color: var(--heading-color);
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+    
+    .skill-card p {
+        color: var(--text-color);
+        font-size: 1rem; /* Base size (16px) */
+        margin-top: 10px;
+        line-height: 1.5;
+    }
+</style>
+
+<!-- Education Timeline Section -->
+<section id="education" class="section education-timeline">
+    <div class="container">
+        <div class="section-title">
+            <h2>Educational Background</h2>
+        </div>
+        
+        <div class="timeline">
+            <!-- Timeline line -->
+            <div class="timeline-line"></div>
+            
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="timeline-img-container">
+                        <img src="/images/ue.png" alt="University Campus">
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>University of the East - Manila</h3>
+                            <span class="timeline-year">2023 - Present</span>
+                        </div>
+                        <div class="timeline-subheader">
+                            <h4>Bachelor of Science in Computer Engineering</h4>
+                        </div>
+                        <div class="timeline-hover-content">
+                            <p>Specialized in hardware and software systems with coursework in embedded systems, computer architecture, and software engineering.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="timeline-img-container">
+                        <img src="/images/mca.jpg" alt="Security Training">
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Maranatha Christian Academy Of Imus</h3>
+                            <span class="timeline-year">2017-2022</span>
+                        </div>
+                        <div class="timeline-subheader">
+                            <h4>JHS/SHS - STEM</h4>
+                        </div>
+                        <div class="timeline-hover-content">
+                            <p>Advanced training in network security, cryptography, and information protection systems with hands-on penetration testing labs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="timeline-img-container">
+                        <img src="/images/datacom.jpg" alt="STEM Education">
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>DataCom School Of Imus</h3>
+                            <span class="timeline-year">2016-2017</span>
+                        </div>
+                        <div class="timeline-subheader">
+                            <h4>Math & Science Program</h4>
+                        </div>
+                        <div class="timeline-hover-content">
+                            <p>Focused on advanced mathematics, physics, and computer science fundamentals with research projects in applied sciences.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<!-- Projects Section -->
+<section id="projects" class="section">
+    <div class="container">
+        <div class="section-title">
+            <h2>My Projects</h2>
+        </div>
+
+        <div class="projects-carousel">
+            <div class="carousel-track">
+                <!-- Project Card 1 -->
+                <div class="project-card">
+                    <div class="project-img" style="background-image: url('/images/arcade2.png');">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="card-body p-4">
+                        <h5>CHOOSE YOUR POISON</h5>
+                        <p>Every round is a new chance to prove yourself.</p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-primary">React</span>
+                            <span class="badge bg-success">Node.js</span>
+                            <span class="badge bg-warning">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card">
+                    <div class="project-img" style="background-image: url('/images/amongus.png');">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="card-body p-4">
+                        <h5>Hi-Low Game</h5>
+                        <p>Fast, addictive, and perfect for thrill-seekers.</p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-info">Vue.js</span>
+                            <span class="badge bg-danger">Firebase</span>
+                            <span class="badge bg-secondary">Socket.io</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card">
+                    <div class="project-img" style="background-image: url('/images/netflix.png');">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="card-body p-4">
+                        <h5>Netflix About Me</h5>
+                        <p>In a world where creativity meets curiosity.</p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-primary">React Native</span>
+                            <span class="badge bg-success">API Integration</span>
+                            <span class="badge bg-warning">Geolocation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 4 -->
+                <div class="project-card">
+                    <div class="project-img" style="background-image: url('/images/jakempoy.png');">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="card-body p-4">
+                        <h5>Jak Em Poy</h5>
+                        <p>Outsmart your opponent in a lightning-fast duel.</p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-dark">HTML/CSS</span>
+                            <span class="badge bg-primary">Bootstrap</span>
+                            <span class="badge bg-warning">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const track = document.querySelector(".carousel-track");
+    track.innerHTML += track.innerHTML; // Duplicate cards for smooth infinite loop
+    
+    // Pause carousel on hover
+    const carousel = document.querySelector(".projects-carousel");
+    carousel.addEventListener('mouseenter', () => {
+        track.style.animationPlayState = 'paused';
+    });
+    
+    carousel.addEventListener('mouseleave', () => {
+        track.style.animationPlayState = 'running';
+    });
+});
+</script>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 animate-on-scroll">
+                    <div class="contact-form">
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Your Email" required>
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control" placeholder="Subject" required>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-contact">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Keane Cregencia. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Education Modals -->
+    <div class="modal fade" id="educationModal1" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Bachelor of Science in Computer Engineering</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>University:</strong> University of Technology</p>
+                    <p><strong>Duration:</strong> 2020-2024</p>
+                    <p><strong>GPA:</strong> 3.8/4.0</p>
+                    <p><strong>Relevant Coursework:</strong></p>
+                    <ul>
+                        <li>Data Structures and Algorithms</li>
+                        <li>Software Engineering</li>
+                        <li>Database Systems</li>
+                        <li>Computer Networks</li>
+                        <li>Machine Learning</li>
+                    </ul>
+                    <p><strong>Achievements:</strong> Dean's List, Programming Competition Winner</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="educationModal2" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Senior High School - STEM</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>School:</strong> Tech High School</p>
+                    <p><strong>Duration:</strong> 2018-2020</p>
+                    <p><strong>Grade:</strong> 95% Average</p>
+                    <p><strong>Specialization:</strong> Science, Technology, Engineering, and Mathematics</p>
+                    <p><strong>Key Subjects:</strong></p>
+                    <ul>
+                        <li>Advanced Mathematics</li>
+                        <li>Physics</li>
+                        <li>Chemistry</li>
+                        <li>Computer Programming</li>
+                        <li>Research Methods</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="trainingModal1" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Full Stack Web Development Bootcamp</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Institution:</strong> Tech Academy</p>
+                    <p><strong>Duration:</strong> 12 weeks (2023)</p>
+                    <p><strong>Technologies Covered:</strong></p>
+                    <ul>
+                        <li>HTML5, CSS3, JavaScript ES6+</li>
+                        <li>React.js and Redux</li>
+                        <li>Node.js and Express.js</li>
+                        <li>MongoDB and Mongoose</li>
+                        <li>RESTful APIs and GraphQL</li>
+                        <li>Git and Deployment</li>
+                    </ul>
+                    <p><strong>Final Project:</strong> Built a full-stack social media application</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="trainingModal2" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">AWS Cloud Practitioner Certification</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Provider:</strong> Amazon Web Services</p>
+                    <p><strong>Completion Date:</strong> 2023</p>
+                    <p><strong>Certification ID:</strong> AWS-CP-2023-001</p>
+                    <p><strong>Skills Acquired:</strong></p>
+                    <ul>
+                        <li>Cloud Computing Fundamentals</li>
+                        <li>AWS Core Services (EC2, S3, RDS)</li>
+                        <li>Security and Compliance</li>
+                        <li>Billing and Pricing</li>
+                        <li>Support Plans</li>
+                    </ul>
+                    <p><strong>Practical Experience:</strong> Deployed multiple projects on AWS infrastructure</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Added external JavaScript file reference -->
+    <script src="script.js"></script>
+    <!-- Manila Time Clock Script -->
+    <script>
+        function updateManilaTime() {
+            const manilaTimeElement = document.getElementById('manilaTime');
+            const manilaDateElement = document.getElementById('manilaDate');
+            const manilaTimeZone = 'Asia/Manila';
+            const now = new Date();
+            const options = { timeZone: manilaTimeZone, hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            const dateOptions = { timeZone: manilaTimeZone, weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            manilaTimeElement.textContent = now.toLocaleTimeString('en-US', options);
+            manilaDateElement.textContent = now.toLocaleDateString('en-US', dateOptions);
+        }
+
+        setInterval(updateManilaTime, 1000);
+        updateManilaTime();
+    </script>
+</body>
+</html>
