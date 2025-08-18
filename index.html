@@ -4,466 +4,499 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keane Cregencia - Portfolio</title>
-    
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Added external CSS file reference -->
+    <!-- App CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container">
-        <!-- Updated Branding with KNC | Computer Engineer -->
-        <a class="navbar-brand-container" href="#home">
-            <span class="logo-text">KNC</span>
-            <span class="logo-divider">|</span>
-            <span class="logo-subtext">Computer Engineer</span>
-        </a>
-        
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#home">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#expertise">Expertise</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#education">Education</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#projects">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-            </ul>
-        </div>
+  <div class="container">
+    <a class="navbar-brand-container" href="#home">
+      <span class="logo-text">KNC</span>
+      <span class="logo-divider">|</span>
+      <span class="logo-subtext">Computer Engineer</span>
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#expertise">Expertise</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="#seminars">Seminars</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
     </div>
+  </div>
 </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section id="home" class="hero">
         <div class="hero-content">
             <a href="#about" class="hero-btn">Discover My Journey</a>
         </div>
         <div class="manila-clock">
-            <div class="clock-container">
-                <div class="time-display" id="manilaTime"></div>
-                <div class="date-display" id="manilaDate"></div>
-                <div class="timezone-label">Manila, Philippines</div>
+            <div class="time-display" id="manilaTime"></div>
+            <div class="date-display" id="manilaDate"></div>
+        </div>
+    </section>
+
+    <!-- Social Media -->
+    <div class="social-icons-container">
+        <a href="https://www.facebook.com/keane.cregencia" target="_blank" class="social-icon" data-tooltip="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/kiyancrg/" target="_blank" class="social-icon" data-tooltip="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://github.com/kcregenciaa/cregencia-ncp3106" target="_blank" class="social-icon" data-tooltip="GitHub">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:cregencia.keanenedd@ue.edu.ph" class="social-icon" data-tooltip="Email">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+
+<!-- About Section -->
+<section id="about" class="section about">
+  <div class="container">
+    <div class="section-title">
+      <h2>About Me</h2>
+    </div>
+    <div class="about-card">
+      <div class="row g-0">
+        <!-- Left Column: Content -->
+        <div class="col-lg-6">
+          <div class="about-content">
+            <h3 class="greeting">
+              Hi! I'm <span class="highlight">Keane Cregencia</span>
+            </h3>
+            <div class="typing-container">
+              <h3 class="animated-text">
+                <span id="typing-text">COMPUTER ENGINEER</span>
+              </h3>
+            </div>
+            <div class="about-text">
+              <p>
+                As a passionate web developer, I specialize in crafting responsive, user-friendly websites that combine aesthetic appeal with technical excellence. My approach focuses on delivering exceptional user experiences through clean code, modern design principles, and performance optimization.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Right Column: Image -->
+        <div class="col-lg-6 d-flex align-items-center justify-content-center">
+          <div class="profile-image-container">
+            <div class="image-wrapper">
+              <img src="/images/prof.png" alt="Keane Cregencia" class="profile-image">
+              <div class="image-overlay"></div>
+              <div class="image-accent"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Infinite Scrolling Text -->
+  <div class="infinite-scroll-container" aria-hidden="true">
+    <!-- Row 1: White, Right → Left -->
+    <div class="scrolling-text-row first-row">
+      <div class="scrolling-text-content">
+        <span>KEANE CREGENCIA</span><span>KEANE CREGENCIA</span><span>KEANE CREGENCIA</span>
+        <span>KEANE CREGENCIA</span><span>KEANE CREGENCIA</span><span>KEANE CREGENCIA</span>
+        <span>KEANE CREGENCIA</span><span>KEANE CREGENCIA</span><span>KEANE CREGENCIA</span>
+        <span>KEANE CREGENCIA</span><span>KEANE CREGENCIA</span><span>KEANE CREGENCIA</span>
+      </div>
+    </div>
+    <!-- Row 2: Green, Left → Right -->
+    <div class="scrolling-text-row second-row">
+      <div class="scrolling-text-content">
+        <span>KEANE CREGENCIA</span><span>KEANE CREGENCIA</span><span>KEANE CREGENCIA</span>
+        <span>KEANE CREGENCIA</span><span>KEANE CREGENCIA</span><span>KEANE CREGENCIA</span>
+        <span>KEANE CREGENCIA</span><span>KEANE CREGENCIA</span><span>KEANE CREGENCIA</span>
+        <span>KEANE CREGENCIA</span><span>KEANE CREGENCIA</span><span>KEANE CREGENCIA</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Expertise -->
+    <section id="expertise" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Expertise</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 animate-on-scroll">
+                    <div class="card skill-card">
+                        <div class="skill-icon">
+                            <div class="icon-grid">
+                                <div class="icon-item" data-name="Python"><i class="fab fa-python"></i></div>
+                                <div class="icon-item" data-name="MySQL"><i class="fas fa-database"></i></div>
+                                <div class="icon-item" data-name="Kotlin"><i class="fas fa-mobile-alt"></i></div>
+                                <div class="icon-item" data-name="Java"><i class="fab fa-java"></i></div>
+                            </div>
+                        </div>
+                        <h4>Software & Mobile Development</h4>
+                        <p>Building robust applications and mobile solutions with Python, Java, Kotlin, and efficient database systems.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 animate-on-scroll">
+                    <div class="card skill-card">
+                        <div class="skill-icon">
+                            <div class="icon-grid">
+                                <div class="icon-item" data-name="HTML"><i class="fab fa-html5"></i></div>
+                                <div class="icon-item" data-name="CSS"><i class="fab fa-css3-alt"></i></div>
+                                <div class="icon-item" data-name="JavaScript"><i class="fab fa-js-square"></i></div>
+                                <div class="icon-item" data-name="Bootstrap"><i class="fab fa-bootstrap"></i></div>
+                            </div>
+                        </div>
+                        <h4>Web Development</h4>
+                        <p>Creating responsive, modern websites with HTML5, CSS3, JavaScript, and popular frameworks.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 animate-on-scroll">
+                    <div class="card skill-card">
+                        <div class="skill-icon">
+                            <div class="icon-grid">
+                                <div class="icon-item" data-name="ChatGPT"><i class="fas fa-robot"></i></div>
+                                <div class="icon-item" data-name="Blackbox"><i class="fas fa-code"></i></div>
+                                <div class="icon-item" data-name="v0"><i class="fas fa-magic"></i></div>
+                                <div class="icon-item" data-name="Copilot"><i class="fas fa-brain"></i></div>
+                            </div>
+                        </div>
+                        <h4>AI Tools</h4>
+                        <p>Leveraging cutting-edge AI tools like ChatGPT, Copilot, and v0 to enhance development workflows.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-            <!-- Social Media Icons -->
-        <div class="social-icons-container">
-            <a href="https://www.facebook.com/keane.cregencia" target="_blank" class="social-icon" data-tooltip="Facebook">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://www.instagram.com/kiyancrg/" target="_blank" class="social-icon" data-tooltip="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://github.com/kcregenciaa/cregencia-ncp3106" target="_blank" class="social-icon" data-tooltip="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="mailto:YOUR_EMAIL" class="social-icon" data-tooltip="Email">
-                <i class="fas fa-envelope"></i>
-            </a>
-        </div>
+    <!-- Education -->
+    <section id="education" class="section education-timeline">
+        <div class="container">
+            <div class="section-title">
+                <h2>Educational Background</h2>
+            </div>
 
-<!-- About Section -->
-<section id="about" class="section about">
-    <div class="container">
-        <div class="section-title">
-            <h2>About Me</h2>
-        </div>
-        <div class="row align-items-center">
-            <!-- Text Content -->
-            <div class="col-lg-6 animate-on-scroll">
-                <div class="position-relative">
-                    <div class="about-content">
-                        <h3 class="mb-4">Hello! I'm Keane Cregencia</h3>
-                        
-                        <!-- Animated Rotating Text -->
-                        <h3 class="animated-text">
-                            <span id="typing-text"></span>
-                        </h3>
-                        <p class="mb-4">
-                            As a web developer, I specialize in creating responsive, user-friendly, and visually engaging websites that deliver exceptional user experiences. I am dedicated to mastering modern web technologies and best practices, ensuring each project is optimized for performance, accessibility, and scalability.
-                        </p>
-                        <div class="row">
-                            <div class="col-6">
-                                <strong>Age:</strong> 19<br>
-                                <strong>Location:</strong> Philippines
+            <div class="timeline">
+                <div class="timeline-line"></div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-img-container">
+                            <img src="/images/ue.png" alt="University Campus">
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>University of the East - Manila</h3>
+                                <span class="timeline-year">2023 - Present</span>
                             </div>
-                            <div class="col-6">
-                                <strong>Email:</strong> cregencia.keanenedd@ue.edu.ph<br>
-                                <strong>Phone:</strong> +63 9070950988
+                            <div class="timeline-subheader">
+                                <h4>Bachelor of Science in Computer Engineering</h4>
+                            </div>
+                            <div class="timeline-hover-content">
+                                <p>Specialized in hardware and software systems with coursework in embedded systems, computer architecture, and software engineering.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-img-container">
+                            <img src="/images/mca.jpg" alt="Security Training">
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Maranatha Christian Academy Of Imus</h3>
+                                <span class="timeline-year">2017-2022</span>
+                            </div>
+                            <div class="timeline-subheader">
+                                <h4>JHS/SHS - STEM</h4>
+                            </div>
+                            <div class="timeline-hover-content">
+                                <p>Advanced training in network security, cryptography, and information protection systems with hands-on penetration testing labs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-img-container">
+                            <img src="/images/datacom.jpg" alt="STEM Education">
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>DataCom School Of Imus</h3>
+                                <span class="timeline-year">2016-2017</span>
+                            </div>
+                            <div class="timeline-subheader">
+                                <h4>Math & Science Program</h4>
+                            </div>
+                            <div class="timeline-hover-content">
+                                <p>Focused on advanced mathematics, physics, and computer science fundamentals with research projects in applied sciences.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Image with Spotify Effect -->
-            <div class="col-lg-6 animate-on-scroll text-center">
-                <div class="spotify-img-wrapper">
-                    <img src="/images/prof.png" 
-                         alt="Keane Cregencia" 
-                         class="img-fluid about-img shadow-lg">
+        </div>
+    </section>
+
+<!-- Seminars & Trainings -->
+<section id="seminars" class="section seminars-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Seminars and Trainings</h2>
+        </div>
+
+        <div class="seminar-list">
+            <div class="seminar-item animate-on-scroll">
+                <div class="seminar-card">
+                    <h5>Circuit Crash: Exploring the Power of Arduino</h5>
+                    <p>A hands-on workshop designed to introduce learners to the basics of Arduino—from understanding components to building simple, interactive projects.</p>
+                </div>
+            </div>
+
+            <div class="seminar-item animate-on-scroll">
+                <div class="seminar-card">
+                    <h5>CPE TechCon 2024: Going Beyond Revolutions</h5>
+                    <p>A seminar that empowers future computer engineers with the skills, mindset, and innovation needed to drive technological advancements and create impact.</p>
+                </div>
+            </div>
+
+            <div class="seminar-item animate-on-scroll">
+                <div class="seminar-card">
+                    <h5>The Developer's Cookbook: Git & GitHub</h5>
+                    <p>A practical workshop that equips developers with essential version control skills, from mastering Git commands to collaborating seamlessly on GitHub.</p>
+                </div>
+            </div>
+
+            <div class="seminar-item animate-on-scroll">
+                <div class="seminar-card">
+                    <h5>Don't Just Code: Copilot Your Way to Success</h5>
+                    <p>An explore-how seminar about how tools like GitHub Copilot can boost productivity, enhance code quality, and transform the way developers approach problem-solving.</p>
+                </div>
+            </div>
+
+            <div class="seminar-item animate-on-scroll">
+                <div class="seminar-card">
+                    <h5>Career Launchpad: Resume Writing for Emerging Computer Engineers</h5>
+                    <p>A practical workshop focused on building impactful, industry-ready resumes that showcase skills, projects, and potential to employers.</p>
+                </div>
+            </div>
+
+            <div class="seminar-item animate-on-scroll">
+                <div class="seminar-card">
+                    <h5>Beyond Limits: Cultivating Growth for Success and Confidence</h5>
+                    <p>A motivational seminar designed to help individuals develop a growth mindset, build self-confidence, and unlock their potential.</p>
+                </div>
+            </div>
+
+            <div class="seminar-item animate-on-scroll">
+                <div class="seminar-card">
+                    <h5>Figma 101 Workshop</h5>
+                    <p>A beginner-friendly session that introduces the fundamentals of Figma for designing, prototyping, and collaborating on user interfaces.</p>
+                </div>
+            </div>
+
+            <div class="seminar-item animate-on-scroll">
+                <div class="seminar-card">
+                    <h5>Psychology of Gaming Addiction</h5>
+                    <p>An insightful seminar that explores psychological factors behind gaming addiction, its impact, and strategies for healthy balance.</p>
+                </div>
+            </div>
+
+            <div class="seminar-item animate-on-scroll">
+                <div class="seminar-card">
+                    <h5>Anti Cyberbullying Seminar</h5>
+                    <p>An educational seminar that raises awareness about the impact of cyberbullying and equips participants with strategies to address online harassment.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
+    <!-- Projects -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Projects</h2>
+            </div>
 
-<!-- Expertise Section -->
-<section id="expertise" class="section">
-    <div class="container">
-        <div class="section-title">
-            <h2>My Expertise</h2>
-        </div>
-        <div class="row g-4">
-            <!-- Software & Mobile Development -->
-            <div class="col-lg-4 col-md-6 animate-on-scroll">
-                <div class="card skill-card">
-                    <div class="skill-icon">
-                        <div class="icon-grid">
-                            <div class="icon-item" data-name="Python">
-                                <i class="fab fa-python"></i>
-                            </div>
-                            <div class="icon-item" data-name="MySQL">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <div class="icon-item" data-name="Kotlin">
-                                <i class="fas fa-mobile-alt"></i>
-                            </div>
-                            <div class="icon-item" data-name="Java">
-                                <i class="fab fa-java"></i>
+            <div class="projects-carousel">
+                <div class="carousel-track">
+                    <div class="project-card" data-project="choose-poison">
+                        <div class="project-img" style="background-image: url('/images/gamble.png');">
+                            <div class="project-overlay"></div>
+                        </div>
+                        <div class="card-body p-4">
+                            <h5>CHOOSE YOUR POISON</h5>
+                            <p>Every round is a new chance to prove yourself.</p>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge bg-primary">React</span>
+                                <span class="badge bg-success">Node.js</span>
+                                <span class="badge bg-warning">MongoDB</span>
                             </div>
                         </div>
                     </div>
-                    <h4>Software & Mobile Development</h4>
-                    <p>Building robust applications and mobile solutions with Python, Java, Kotlin, and efficient database systems.</p>
-                </div>
+
+                    <div class="project-card" data-project="hi-low">
+                        <div class="project-img" style="background-image: url('images/amongus.png');">
+                            <div class="project-overlay"></div>
+                        </div>
+                        <div class="card-body p-4">
+                            <h5>Hi-Low Game</h5>
+                            <p>Fast, addictive, and perfect for thrill-seekers.</p>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge bg-info">Vue.js</span>
+                                <span class="badge bg-danger">Firebase</span>
+                                <span class="badge bg-secondary">Socket.io</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="netflix-about">
+                        <div class="project-img" style="background-image: url('images/netflix.png');">
+                            <div class="project-overlay"></div>
+                        </div>
+                        <div class="card-body p-4">
+                            <h5>Netflix About Me</h5>
+                            <p>In a world where creativity meets curiosity.</p>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge bg-primary">React Native</span>
+                                <span class="badge bg-success">API Integration</span>
+                                <span class="badge bg-warning">Geolocation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="jak-em-poy">
+                        <div class="project-img" style="background-image: url('/images/taprisk.png');">
+                            <div class="project-overlay"></div>
+                        </div>
+                        <div class="card-body p-4">
+                            <h5>Jak Em Poy</h5>
+                            <p>Outsmart your opponent in a lightning-fast duel.</p>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge bg-dark">HTML/CSS</span>
+                                <span class="badge bg-primary">Bootstrap</span>
+                                <span class="badge bg-warning">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- .carousel-track -->
+            </div> <!-- .projects-carousel -->
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section faq-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
             </div>
             
-            <!-- Web Development -->
-            <div class="col-lg-4 col-md-6 animate-on-scroll">
-                <div class="card skill-card">
-                    <div class="skill-icon">
-                        <div class="icon-grid">
-                            <div class="icon-item" data-name="HTML">
-                                <i class="fab fa-html5"></i>
-                            </div>
-                            <div class="icon-item" data-name="CSS">
-                                <i class="fab fa-css3-alt"></i>
-                            </div>
-                            <div class="icon-item" data-name="JavaScript">
-                                <i class="fab fa-js-square"></i>
-                            </div>
-                            <div class="icon-item" data-name="Bootstrap">
-                                <i class="fab fa-bootstrap"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <h4>Web Development</h4>
-                    <p>Creating responsive, modern websites with HTML5, CSS3, JavaScript, and popular frameworks.</p>
-                </div>
-            </div>
-            
-            <!-- AI Tools -->
-            <div class="col-lg-4 col-md-6 animate-on-scroll">
-                <div class="card skill-card">
-                    <div class="skill-icon">
-                        <div class="icon-grid">
-                            <div class="icon-item" data-name="ChatGPT">
-                                <i class="fas fa-robot"></i>
-                            </div>
-                            <div class="icon-item" data-name="Blackbox">
-                                <i class="fas fa-code"></i>
-                            </div>
-                            <div class="icon-item" data-name="v0">
-                                <i class="fas fa-magic"></i>
-                            </div>
-                            <div class="icon-item" data-name="Copilot">
-                                <i class="fas fa-brain"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <h4>AI Tools</h4>
-                    <p>Leveraging cutting-edge AI tools like ChatGPT, Copilot, and v0 to enhance development workflows.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<style>
-    .skill-card {
-        height: 100%;
-        border: none;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-        padding: 30px 25px;
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        text-align: center;
-    }
-    
-    .skill-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 15px 35px rgba(0,0,0,0.12);
-    }
-    
-    .icon-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        margin: 10px 0 25px;
-    }
-    
-    .icon-item {
-        position: relative;
-        font-size: 3.5rem; /* 56px - 3.5x larger than paragraph */
-        color: var(--primary-color);
-        transition: all 0.3s ease;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .icon-item:hover {
-        transform: scale(1.15);
-        color: var(--primary-dark);
-    }
-    
-    .icon-item::after {
-        content: attr(data-name);
-        position: absolute;
-        bottom: -28px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: var(--primary-color);
-        color: white;
-        padding: 5px 12px;
-        border-radius: 20px;
-        font-size: 0.8rem;
-        opacity: 0;
-        transition: all 0.3s ease;
-        font-weight: 500;
-        white-space: nowrap;
-    }
-    
-    .icon-item:hover::after {
-        opacity: 1;
-        bottom: -22px;
-    }
-    
-    .skill-card h4 {
-        margin: 5px 0;
-        color: var(--heading-color);
-        font-size: 1.3rem;
-        font-weight: 600;
-    }
-    
-    .skill-card p {
-        color: var(--text-color);
-        font-size: 1rem; /* Base size (16px) */
-        margin-top: 10px;
-        line-height: 1.5;
-    }
-</style>
-
-<!-- Education Timeline Section -->
-<section id="education" class="section education-timeline">
-    <div class="container">
-        <div class="section-title">
-            <h2>Educational Background</h2>
-        </div>
-        
-        <div class="timeline">
-            <!-- Timeline line -->
-            <div class="timeline-line"></div>
-            
-            <!-- Timeline Item 1 -->
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-card">
-                    <div class="timeline-img-container">
-                        <img src="/images/ue.png" alt="University Campus">
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>University of the East - Manila</h3>
-                            <span class="timeline-year">2023 - Present</span>
-                        </div>
-                        <div class="timeline-subheader">
-                            <h4>Bachelor of Science in Computer Engineering</h4>
-                        </div>
-                        <div class="timeline-hover-content">
-                            <p>Specialized in hardware and software systems with coursework in embedded systems, computer architecture, and software engineering.</p>
+            <div class="accordion" id="faqAccordion">
+                <!-- FAQ Item 1 -->
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne">
+                            What services do you offer as a Computer Engineer?
+                        </button>
+                    </h3>
+                    <div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            As a Computer Engineering student, I offer web development, software development, and technical consulting services. I specialize in creating responsive websites, developing applications, and providing solutions that bridge hardware and software.
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Timeline Item 2 -->
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-card">
-                    <div class="timeline-img-container">
-                        <img src="/images/mca.jpg" alt="Security Training">
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Maranatha Christian Academy Of Imus</h3>
-                            <span class="timeline-year">2017-2022</span>
-                        </div>
-                        <div class="timeline-subheader">
-                            <h4>JHS/SHS - STEM</h4>
-                        </div>
-                        <div class="timeline-hover-content">
-                            <p>Advanced training in network security, cryptography, and information protection systems with hands-on penetration testing labs.</p>
+                
+                <!-- FAQ Item 2 -->
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo">
+                            How can I contact you for a project?
+                        </button>
+                    </h3>
+                    <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            You can reach me through the contact form on this website, or directly via email at cregencia.keanenedd@ue.edu.ph. I typically respond within 24-48 hours to all serious inquiries.
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Timeline Item 3 -->
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-card">
-                    <div class="timeline-img-container">
-                        <img src="/images/datacom.jpg" alt="STEM Education">
+                
+                <!-- FAQ Item 3 -->
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree">
+                            What technologies are you currently learning?
+                        </button>
+                    </h3>
+                    <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            I'm currently expanding my knowledge in React Native for mobile development, Node.js for backend services, and exploring AI/ML applications. I'm also deepening my understanding of computer networks and embedded systems.
+                        </div>
                     </div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>DataCom School Of Imus</h3>
-                            <span class="timeline-year">2016-2017</span>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFour">
+                            Do you work on open-source projects?
+                        </button>
+                    </h3>
+                    <div id="faqFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes! I actively contribute to open-source projects when possible. You can check out my GitHub profile for current contributions. I believe in giving back to the developer community.
                         </div>
-                        <div class="timeline-subheader">
-                            <h4>Math & Science Program</h4>
-                        </div>
-                        <div class="timeline-hover-content">
-                            <p>Focused on advanced mathematics, physics, and computer science fundamentals with research projects in applied sciences.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFive">
+                            What's your approach to problem-solving?
+                        </button>
+                    </h3>
+                    <div id="faqFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            My approach combines analytical thinking with creativity. I break problems into smaller components, research solutions, prototype quickly, and iterate. I leverage both technical knowledge and modern tools to find efficient solutions.
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Font Awesome for icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-<!-- Projects Section -->
-<section id="projects" class="section">
-    <div class="container">
-        <div class="section-title">
-            <h2>My Projects</h2>
-        </div>
-
-        <div class="projects-carousel">
-            <div class="carousel-track">
-                <!-- Project Card 1 -->
-                <div class="project-card">
-                    <div class="project-img" style="background-image: url('/images/arcade2.png');">
-                        <div class="project-overlay"></div>
-                    </div>
-                    <div class="card-body p-4">
-                        <h5>CHOOSE YOUR POISON</h5>
-                        <p>Every round is a new chance to prove yourself.</p>
-                        <div class="d-flex flex-wrap gap-2">
-                            <span class="badge bg-primary">React</span>
-                            <span class="badge bg-success">Node.js</span>
-                            <span class="badge bg-warning">MongoDB</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project Card 2 -->
-                <div class="project-card">
-                    <div class="project-img" style="background-image: url('/images/amongus.png');">
-                        <div class="project-overlay"></div>
-                    </div>
-                    <div class="card-body p-4">
-                        <h5>Hi-Low Game</h5>
-                        <p>Fast, addictive, and perfect for thrill-seekers.</p>
-                        <div class="d-flex flex-wrap gap-2">
-                            <span class="badge bg-info">Vue.js</span>
-                            <span class="badge bg-danger">Firebase</span>
-                            <span class="badge bg-secondary">Socket.io</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project Card 3 -->
-                <div class="project-card">
-                    <div class="project-img" style="background-image: url('/images/netflix.png');">
-                        <div class="project-overlay"></div>
-                    </div>
-                    <div class="card-body p-4">
-                        <h5>Netflix About Me</h5>
-                        <p>In a world where creativity meets curiosity.</p>
-                        <div class="d-flex flex-wrap gap-2">
-                            <span class="badge bg-primary">React Native</span>
-                            <span class="badge bg-success">API Integration</span>
-                            <span class="badge bg-warning">Geolocation</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project Card 4 -->
-                <div class="project-card">
-                    <div class="project-img" style="background-image: url('/images/jakempoy.png');">
-                        <div class="project-overlay"></div>
-                    </div>
-                    <div class="card-body p-4">
-                        <h5>Jak Em Poy</h5>
-                        <p>Outsmart your opponent in a lightning-fast duel.</p>
-                        <div class="d-flex flex-wrap gap-2">
-                            <span class="badge bg-dark">HTML/CSS</span>
-                            <span class="badge bg-primary">Bootstrap</span>
-                            <span class="badge bg-warning">JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    const track = document.querySelector(".carousel-track");
-    track.innerHTML += track.innerHTML; // Duplicate cards for smooth infinite loop
-    
-    // Pause carousel on hover
-    const carousel = document.querySelector(".projects-carousel");
-    carousel.addEventListener('mouseenter', () => {
-        track.style.animationPlayState = 'paused';
-    });
-    
-    carousel.addEventListener('mouseleave', () => {
-        track.style.animationPlayState = 'running';
-    });
-});
-</script>
-
-
-    <!-- Contact Section -->
+    <!-- Contact -->
     <section id="contact" class="section contact">
         <div class="container">
             <div class="section-title">
@@ -475,16 +508,16 @@ document.addEventListener("DOMContentLoaded", function() {
                         <form>
                             <div class="row g-3">
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                    <input name="name" type="text" class="form-control" placeholder="Your Name" required>
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="email" class="form-control" placeholder="Your Email" required>
+                                    <input name="email" type="email" class="form-control" placeholder="Your Email" required>
                                 </div>
                                 <div class="col-12">
-                                    <input type="text" class="form-control" placeholder="Subject" required>
+                                    <input name="subject" type="text" class="form-control" placeholder="Subject" required>
                                 </div>
                                 <div class="col-12">
-                                    <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                                    <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
                                 </div>
                                 <div class="col-12 text-center">
                                     <button type="submit" class="btn btn-contact">Send Message</button>
@@ -504,7 +537,7 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
     </footer>
 
-    <!-- Education Modals -->
+    <!-- Education/Training Modals -->
     <div class="modal fade" id="educationModal1" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -513,7 +546,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <p><strong>University:</strong> University of Technology</p>
+                    <p><strong>University:</strong> University of the East</p>
                     <p><strong>Duration:</strong> 2020-2024</p>
                     <p><strong>GPA:</strong> 3.8/4.0</p>
                     <p><strong>Relevant Coursework:</strong></p>
@@ -605,25 +638,99 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
     </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Added external JavaScript file reference -->
-    <script src="script.js"></script>
-    <!-- Manila Time Clock Script -->
-    <script>
-        function updateManilaTime() {
-            const manilaTimeElement = document.getElementById('manilaTime');
-            const manilaDateElement = document.getElementById('manilaDate');
-            const manilaTimeZone = 'Asia/Manila';
-            const now = new Date();
-            const options = { timeZone: manilaTimeZone, hour: '2-digit', minute: '2-digit', second: '2-digit' };
-            const dateOptions = { timeZone: manilaTimeZone, weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-            manilaTimeElement.textContent = now.toLocaleTimeString('en-US', options);
-            manilaDateElement.textContent = now.toLocaleDateString('en-US', dateOptions);
-        }
+    <!-- Project Modal -->
+    <div class="modal fade" id="projectModal" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectModalTitle">Project Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-mockup">
+                        <div class="mockup-carousel">
+                            <div class="mockup-carousel-inner">
+                                <div class="mockup-slide active">
+                                    <img id="mockupImage1" src="" alt="Project Mockup 1" class="mockup-image">
+                                </div>
+                                <div class="mockup-slide">
+                                    <img id="mockupImage2" src="" alt="Project Mockup 2" class="mockup-image">
+                                </div>
+                                <div class="mockup-slide">
+                                    <img id="mockupImage3" src="" alt="Project Mockup 3" class="mockup-image">
+                                </div>
+                            </div>
+                            <button class="carousel-control prev" type="button">‹</button>
+                            <button class="carousel-control next" type="button">›</button>
+                            <div class="carousel-indicators">
+                                <span class="indicator active" data-slide="0"></span>
+                                <span class="indicator" data-slide="1"></span>
+                                <span class="indicator" data-slide="2"></span>
+                            </div>
+                        </div>
+                        <div class="project-description">
+                            <h4 id="projectModalName">Project Name</h4>
+                            <p id="projectModalDescription">Project description will appear here.</p>
+                        </div>
+                        <div class="project-tech-stack">
+                            <h6>Technologies Used</h6>
+                            <div id="projectModalTech"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        setInterval(updateManilaTime, 1000);
-        updateManilaTime();
-    </script>
+    <!-- Project Data (Hidden) -->
+    <div id="projectData" style="display: none;">
+        <div class="project-info" data-project="choose-poison">
+            <div class="project-name">CHOOSE YOUR POISON</div>
+            <div class="project-description">Every round is a new chance to prove yourself. This arcade-style game challenges players to make strategic decisions under pressure, with each choice leading to different outcomes and challenges.</div>
+            <div class="project-images">
+                <img src="/images/high risk.png" alt="Main Game Interface">
+                <img src="/images/poison.png" alt="Gameplay Screenshot">
+                <img src="/images/jordan.png" alt="Game Menu/UI">
+            </div>
+            <div class="project-technologies">React, Node.js, MongoDB</div>
+        </div>
+
+        <div class="project-info" data-project="hi-low">
+            <div class="project-name">Hi-Low Game</div>
+            <div class="project-description">Fast, addictive, and perfect for thrill-seekers. A classic card game where players must guess whether the next card will be higher or lower than the current one, with increasing stakes and excitement.</div>
+            <div class="project-images">
+                <img src="/images/enter.png" alt="Game Start Screen">
+                <img src="/images/shh.png" alt="In-Game Interface">
+                <img src="/images/ints.png" alt="Game Over Screen">
+            </div>
+            <div class="project-technologies">Vue.js, Firebase, Socket.io</div>
+        </div>
+
+        <div class="project-info" data-project="netflix-about">
+            <div class="project-name">Netflix About Me</div>
+            <div class="project-description">In a world where creativity meets curiosity. A Netflix-inspired personal portfolio that showcases creativity and storytelling through an engaging, cinematic interface.</div>
+            <div class="project-images">
+                <img src="/images/whosme.png" alt="Main Interface">
+                <img src="images/socials.png" alt="Content Selection">
+                <img src="/images/profabt.png" alt="Profile View">
+            </div>
+            <div class="project-technologies">React Native, API Integration, Geolocation</div>
+        </div>
+
+        <div class="project-info" data-project="jak-em-poy">
+            <div class="project-name">Jak Em Poy</div>
+            <div class="project-description">Outsmart your opponent in a lightning-fast duel. A traditional Filipino game brought to the digital age with modern UI/UX and multiplayer capabilities.</div>
+            <div class="project-images">
+                <img src="/images/jmp.png" alt="Game Start">
+                <img src="images/hilo.png" alt="Gameplay">
+                <img src="images/inbet.png" alt="Results Screen">
+            </div>
+            <div class="project-technologies">HTML/CSS, Bootstrap, JavaScript</div>
+        </div>
+    </div>
+
+    <!-- Bootstrap + App JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
