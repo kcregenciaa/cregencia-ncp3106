@@ -226,69 +226,6 @@ body {
   z-index: 1;
 }
 
-/* Super Smooth Bouncy Button with Enhanced Animations */
-.hero-btn {
-  display: inline-block;
-  padding: 18px 44px;
-  background: var(--spotify-gradient);
-  color: #fff;
-  text-decoration: none;
-  border-radius: 999px;
-  font-weight: 700;
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  opacity: 0;
-  animation: fadeInUp 1s ease forwards 1s, superSmoothBounce 3s ease-in-out 2s infinite;
-  border: none;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 0.95rem;
-  position: relative;
-  box-shadow: 0 8px 32px rgba(29, 185, 84, 0.3);
-  cursor: pointer;
-  z-index: 10;
-  will-change: transform, box-shadow;
-  backface-visibility: hidden;
-  perspective: 1000px;
-}
-
-.hero-btn::before {
-  content: "";
-  position: absolute;
-  inset: -2px;
-  background: linear-gradient(45deg, transparent, rgba(29, 185, 84, 0.3), transparent);
-  border-radius: 999px;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  z-index: -1;
-}
-
-.hero-btn:hover {
-  transform: translateY(-8px) scale(1.05);
-  box-shadow: 0 20px 60px rgba(29, 185, 84, 0.6);
-  animation-play-state: paused;
-  background: var(--spotify-gradient-hover);
-}
-
-.hero-btn:hover::before {
-  opacity: 1;
-  animation: pulseGlow 2s ease-in-out infinite;
-}
-
-.hero-btn:active {
-  animation: clickBounce 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transform: translateY(-2px) scale(0.98);
-}
-
-.hero-btn:focus {
-  outline: none;
-  box-shadow: 0 8px 32px rgba(29, 185, 84, 0.3), 0 0 0 3px rgba(29, 185, 84, 0.3);
-}
-
-.hero-content {
-  position: relative;
-  z-index: 10;
-}
-
 /* Manila Clock */
 .manila-clock {
   position: absolute;
@@ -407,8 +344,6 @@ body {
   margin-bottom: 15px;
   letter-spacing: -0.5px;
 }
-
-/* Removed title-accent */
 
 /* About Card */
 .about-card {
@@ -572,67 +507,7 @@ body {
   opacity: 0.4;
 }
 
-/* Infinite Scrolling Text */
-.infinite-scroll-container {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  z-index: 1;
-  pointer-events: none;
-}
 
-.scrolling-text-row {
-  padding: 10px 0;
-  position: relative;
-  display: flex;
-}
-
-.scrolling-text-content {
-  display: flex;
-  white-space: nowrap;
-  will-change: transform;
-}
-
-/* Duplicate content for seamless infinite loop */
-.scrolling-text-content span {
-  font-size: 3.5rem;
-  font-weight: 800;
-  margin: 0 40px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-family: 'Poppins', sans-serif;
-}
-
-.first-row .scrolling-text-content span {
-  color: var(--spotify-light);
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-}
-
-.second-row .scrolling-text-content span {
-  color: var(--spotify-green);
-  text-shadow: 0 0 10px rgba(29, 185, 84, 0.3);
-}
-
-/* Continuous Animations */
-.first-row .scrolling-text-content {
-  animation: scroll-left 20s linear infinite;
-}
-
-.second-row .scrolling-text-content {
-  animation: scroll-right 18s linear infinite;
-}
-
-@keyframes scroll-left {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
-}
-
-@keyframes scroll-right {
-  0%   { transform: translateX(-100%); }
-  100% { transform: translateX(0); }
-}
 
 
 /* Responsive Design */
@@ -641,7 +516,6 @@ body {
   .image-wrapper { width: 280px; height: 280px; }
   .greeting { font-size: 2rem; }
   .animated-text { font-size: 1.6rem; }
-  .scrolling-text-content span { font-size: 3rem; margin: 0 30px; }
 }
 
 @media (max-width: 768px) {
@@ -649,7 +523,6 @@ body {
   .about-card { margin: 0 15px; }
   .profile-image-container { padding: 0 40px 40px; }
   .image-wrapper { width: 240px; height: 240px; }
-  .scrolling-text-content span { font-size: 2.5rem; margin: 0 20px; }
 }
 
 @media (max-width: 576px) {
@@ -659,8 +532,6 @@ body {
   .animated-text { font-size: 1.4rem; }
   .about-text p { font-size: 1rem; }
   .section-title h2 { font-size: 2rem; }
-  .scrolling-text-content span { font-size: 2rem; margin: 0 15px; }
-  .scrolling-text-row { padding: 10px 0; }
 }
 
 /* Expertise cards */
@@ -953,36 +824,18 @@ body {
   margin: 0;
 }
 
-/* Projects */
-.projects-carousel {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  padding: 10px 0;
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2x2 layout */
+  gap: 30px;
+  max-width: 1000px;
   margin: 0 auto;
-  max-width: 1200px;
-}
-.carousel-track {
-  display: flex;
-  gap: 26px;
-  animation: scrollCarousel 60s linear infinite;
-  will-change: transform;
-}
-@keyframes scrollCarousel {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-.projects-carousel:hover .carousel-track {
-  animation-play-state: paused;
+  padding: 20px 0;
 }
 
 .project-card {
-  flex: 0 0 auto;
-  width: 340px;
+  width: 100%;
   border-radius: 12px;
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -992,6 +845,8 @@ body {
   background-clip: padding-box;
   cursor: pointer;
   position: relative;
+  pointer-events: auto;
+  z-index: 2;
 }
 
 .project-card::after {
@@ -1003,6 +858,7 @@ body {
   opacity: 0.5;
   transition: all 0.3s ease;
   pointer-events: none;
+  z-index: 1;
 }
 
 .project-card:hover::after {
@@ -1030,15 +886,16 @@ body {
   font-weight: 700;
   opacity: 0;
   transition: opacity 0.25s ease;
-  z-index: 10;
+  z-index: 5;
   pointer-events: none;
 }
 .project-card:hover::before {
   opacity: 1;
 }
 
+/* Image */
 .project-img {
-  height: 420px;
+  height: 320px;
   position: relative;
   background-size: contain;
   background-position: center;
@@ -1050,6 +907,7 @@ body {
   transform: scale(1.04);
 }
 
+/* Card Content */
 .card-body {
   padding: 18px;
   background: linear-gradient(to top, #1a1a1a, #121212);
@@ -1072,13 +930,8 @@ body {
   line-height: 1.5;
   margin-bottom: 12px;
 }
-.badge {
-  transition: all 0.2s ease;
-}
-.project-card:hover .badge {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-}
+
+/* Overlay */
 .project-overlay {
   position: absolute;
   inset: 0;
@@ -1090,33 +943,16 @@ body {
   opacity: 1;
 }
 
+/* Responsive */
 @media (max-width: 992px) {
-  .project-card {
-    width: 300px;
+  .projects-grid {
+    grid-template-columns: 1fr; /* stack into 1 column */
   }
   .project-img {
-    height: 380px;
+    height: 280px;
   }
 }
-@media (max-width: 768px) {
-  .carousel-track {
-    gap: 20px;
-  }
-  .project-card {
-    width: 280px;
-  }
-  .project-img {
-    height: 340px;
-  }
-}
-@media (max-width: 576px) {
-  .project-card {
-    width: 260px;
-  }
-  .project-img {
-    height: 300px;
-  }
-}
+
 
 /* FAQ Section */
 .faq-section {
@@ -1284,19 +1120,25 @@ body {
   justify-content: center;
   padding: 18px;
   background: var(--spotify-dark-2);
+  visibility: hidden;
 }
 .mockup-slide.active {
   opacity: 1;
   z-index: 1;
+  visibility: visible;
 }
 .mockup-image {
   max-width: 100%;
   max-height: 100%;
+  width: auto;
+  height: auto;
   object-fit: contain;
   border-radius: 8px;
   transition: all 0.25s ease;
   filter: brightness(0.95);
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+  display: block;
+  margin: 0 auto;
 }
 .mockup-image:hover {
   filter: brightness(1.06);
@@ -1673,88 +1515,6 @@ body {
   }
 }
 
-/* Infinite Scrolling Text (optional decorative) */
-.infinite-scroll-container {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  margin-top: 60px;
-  background: var(--glass-bg);
-  backdrop-filter: blur(16px);
-  padding: 24px 0;
-  border-top: 1px solid var(--glass-border);
-  border-bottom: 1px solid var(--glass-border);
-}
-.scroll-row {
-  display: flex;
-  white-space: nowrap;
-  margin: 12px 0;
-  position: relative;
-}
-.scroll-row-1 {
-  animation: scrollLeft 20s linear infinite;
-}
-.scroll-row-2 {
-  animation: scrollRight 20s linear infinite;
-}
-.scroll-text {
-  font-size: 2.2rem;
-  font-weight: 800;
-  margin: 0 34px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  transition: all 0.2s ease;
-}
-.scroll-row-1 .scrolling-text-content span {
-  color: var(--spotify-green);
-  text-shadow: 0 0 26px rgba(29, 185, 84, 0.5);
-}
-.scroll-row-2 .scroll-text {
-  color: #ffffff;
-  opacity: 0.9;
-}
-.scroll-text:hover {
-  transform: scale(1.08);
-  filter: brightness(1.08);
-}
-@keyframes scrollLeft {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-@keyframes scrollRight {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-
-@media (max-width: 768px) {
-  .scroll-text {
-    font-size: 1.8rem;
-    margin: 0 22px;
-  }
-  .infinite-scroll-container {
-    margin-top: 36px;
-    padding: 14px 0;
-  }
-}
-@media (max-width: 576px) {
-  .scroll-text {
-    font-size: 1.5rem;
-    margin: 0 18px;
-    letter-spacing: 1px;
-  }
-  .infinite-scroll-container {
-    margin-top: 26px;
-    padding: 10px 0;
-  }
-}
 
 /* Strong overrides: remove all backgrounds/visual chrome for the Manila clock but keep layout */
 #home .manila-clock,

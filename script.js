@@ -335,41 +335,51 @@ class PortfolioApp {
   }
 
   setupProjectsCarousel() {
-    const track = document.querySelector(".carousel-track");
-    const carousel = document.querySelector(".projects-carousel");
-    if (!track || !carousel) return;
-
-    track.innerHTML += track.innerHTML;
-
-    carousel.addEventListener("mouseenter", () => {
-      track.style.animationPlayState = "paused";
-    });
-
-    carousel.addEventListener("mouseleave", () => {
-      track.style.animationPlayState = "running";
-    });
-
-    carousel.addEventListener("touchstart", () => {
-      track.style.animationPlayState = "paused";
-    });
-
-    carousel.addEventListener("touchend", () => {
-      setTimeout(() => {
-        track.style.animationPlayState = "running";
-      }, 100);
+    // This method ensures project cards are properly initialized
+    const projectCards = document.querySelectorAll(".project-card");
+    console.log(`Found ${projectCards.length} project cards`);
+    
+    // Ensure cards have proper cursor and are clickable
+    projectCards.forEach(card => {
+      card.style.cursor = "pointer";
+      card.style.userSelect = "none";
     });
   }
 
   setupProjectModals() {
     const projectCards = document.querySelectorAll(".project-card");
-    if (!projectCards.length) return;
+    console.log(`Setting up modals for ${projectCards.length} project cards`);
+    
+    if (!projectCards.length) {
+      console.warn("No project cards found!");
+      return;
+    }
 
-    projectCards.forEach((card) => {
-      card.addEventListener("click", () => {
+    projectCards.forEach((card, index) => {
+      console.log(`Setting up card ${index + 1}:`, card.getAttribute("data-project"));
+      
+      // Add visual feedback for debugging
+      card.style.cursor = "pointer";
+      card.style.userSelect = "none";
+      
+      card.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        console.log("Project card clicked:", card.getAttribute("data-project"));
+        
         const projectId = card.getAttribute("data-project");
         const projectInfo = document.querySelector(
           `#projectData .project-info[data-project="${projectId}"]`
         );
+        
+        console.log("Project info found:", !!projectInfo);
+        
+        if (!projectInfo) {
+          console.error(`No project data found for project: ${projectId}`);
+          alert(`Project data not found for: ${projectId}`);
+          return;
+        }
 
         if (projectInfo) {
           card.classList.add("loading");
@@ -380,10 +390,7 @@ class PortfolioApp {
             projectInfo.querySelector(".project-description").textContent;
           const projectImages = Array.from(
             projectInfo.querySelectorAll(".project-images img")
-          ).map((img) => img.src);
-          const projectTechnologies = projectInfo
-            .querySelector(".project-technologies")
-            .textContent.split(", ");
+          ).map((img) => img.getAttribute("src"));
 
           document.getElementById("projectModalTitle").textContent = projectName;
           document.getElementById("projectModalName").textContent = projectName;
@@ -398,27 +405,25 @@ class PortfolioApp {
 
           images.forEach((img, index) => {
             if (projectImages[index]) {
-              img.style.opacity = "0.5";
+              img.style.opacity = "0";
               img.src = projectImages[index];
               img.onload = () => {
                 img.style.opacity = "1";
-                img.style.transition = "opacity 0.3s ease";
+                img.style.transition = "opacity 0.4s ease";
               };
+              img.onerror = () => {
+                console.warn(`Failed to load image: ${projectImages[index]}`);
+                img.style.display = "none";
+              };
+            } else {
+              img.style.display = "none";
             }
           });
 
-          const techContainer = document.getElementById("projectModalTech");
-          techContainer.innerHTML = "";
-          projectTechnologies.forEach((tech) => {
-            const badge = document.createElement("span");
-            badge.className = "badge bg-success";
-            badge.textContent = tech.trim();
-            techContainer.appendChild(badge);
-          });
 
           setTimeout(() => {
             card.classList.remove("loading");
-          }, 500);
+          }, 300);
 
           const modalElement = document.getElementById("projectModal");
           const modal = window.bootstrap.Modal.getOrCreateInstance(modalElement);
@@ -451,6 +456,7 @@ class PortfolioApp {
         indicator.classList.toggle("active", i === index);
       });
       currentSlide = index;
+      console.log(`Showing slide ${index + 1} of ${slides.length}`);
     };
 
     const nextSlide = () => {
@@ -463,11 +469,30 @@ class PortfolioApp {
       showSlide(prev);
     };
 
-    if (prevBtn) prevBtn.addEventListener("click", prevSlide);
-    if (nextBtn) nextBtn.addEventListener("click", nextSlide);
+    // Initialize first slide
+    showSlide(0);
 
+    // Add event listeners
+    if (prevBtn) {
+      prevBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        prevSlide();
+      });
+    }
+    
+    if (nextBtn) {
+      nextBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        nextSlide();
+      });
+    }
+
+    // Add indicator click listeners
     indicators.forEach((indicator, index) => {
-      indicator.addEventListener("click", () => showSlide(index));
+      indicator.addEventListener("click", (e) => {
+        e.preventDefault();
+        showSlide(index);
+      });
     });
   }
 }
@@ -475,9 +500,3 @@ class PortfolioApp {
 document.addEventListener("DOMContentLoaded", () => {
   new PortfolioApp();
 });
-
-// When hiding:
-navbar.classList.add('hide');
-
-// When showing:
-navbar.classList.remove('hide');
